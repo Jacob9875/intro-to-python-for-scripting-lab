@@ -20,6 +20,18 @@
 
 def calculate_dog_years():
     # Your control flow logic goes here
+    dog_years = int(input("Input a dog's age: "))
 
+    if dog_years < 0:
+        print("Age cannot be negative. Please enter a valid age: ")
+        return
+    
+    if dog_years <= 2:
+        print(dog_years * 10)
+    
+    else: 
+        dog_years = 2 * 10 + (dog_years - 2) * 7
+
+        print(f"The dog's age in dog years is {dog_years}.")
 # Call the function
 calculate_dog_years()
